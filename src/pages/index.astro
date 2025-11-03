@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const socialLinks = [
+  // {
+  //   id: "mastodon",
+  //   name: "cloudisland.nz/@patrick",
+  //   description: "Follow them on Mastodon",
+  //   url: "https://cloudisland.nz/@patrick",
+  //   icon: "🐘"
+  // }
+  /*  {
+    id: "instagram",
+    name: "Instagram",
+    description: "Visual stories and inspiration",
+    url: "https://instagram.com",
+    icon: "📷",
+  },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    description: "Professional experience and portfolio",
+    url: "https://linkedin.com",
+    icon: "💼",
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    description: "Code projects and contributions",
+    url: "https://github.com",
+    icon: "{",
+  },
+  {
+    id: "email",
+    name: "Email",
+    description: "Get in touch directly",
+    url: "mailto:hello@example.com",
+    icon: "✉",
+  },
+  {
+    id: "website",
+    name: "Personal Website",
+    description: "My portfolio and blog",
+    url: "https://example.com",
+    icon: "🌐",
+  },*/
+];
+---
+
+<Layout title="this is me" description="Identity in flux.">
+  <div
+    class="min-h-screen bg-background text-foreground transition-colors duration-300"
+  >
+    <main class="flex items-center justify-center min-h-screen px-4">
+      <div class="w-full max-w-2xl">
+        <div class="mb-16">
+          <div class="mb-12 flex justify-start">
+            <div
+              class="relative w-24 h-24 rounded-full overflow-hidden bg-muted flex-shrink-0"
+            >
+              <img
+                alt="thisisme's profile picture"
+                width="96"
+                height="96"
+                decoding="async"
+                data-nimg="1"
+                class="w-full h-full object-cover"
+                src="/avatar.png"
+                style="color: transparent;"
+              />
+            </div>
+          </div><div class="space-y-6">
+            <div>
+              <h1
+                class="text-4xl md:text-5xl font-medium leading-tight tracking-tight text-accent"
+              >
+                this is me
+              </h1>
+            </div><div class="space-y-4">
+              <p class="text-lg text-foreground/80 leading-relaxed max-w-xl">
+                You probably know me as Patrick
+              </p><p
+                class="text-base text-foreground/60 leading-relaxed max-w-xl"
+              >
+                You can find some <a
+                  href="https://patrick.nz/projects/words/"
+                  class="underline hover:text-foreground">words I've written</a
+                > or <a
+                  href="https://patrick.nz/talks/"
+                  class="underline hover:text-foreground">talks I've given</a
+                >. Reach out via <a
+                  href="https://cloudisland.nz/@patrick"
+                  class="underline hover:text-foreground">Mastodon</a
+                > or by emailing hi@ this domain.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-1">
+          {
+            socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block py-4 px-0 transition-all duration-200 cursor-pointer"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-3 mb-1.5">
+                      <span class="text-lg flex-shrink-0">{link.icon}</span>
+                      <h3 class="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-200">
+                        {link.name}
+                      </h3>
+                    </div>
+                    <p class="text-sm text-foreground/60 group-hover:text-foreground/80 transition-colors duration-200">
+                      {link.description}
+                    </p>
+                  </div>
+                  {/* <ChevronRight class="w-5 h-5 text-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200 flex-shrink-0 mt-1" /> */}
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
