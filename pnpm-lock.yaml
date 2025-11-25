@@ -8,7 +8,13 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/commissioner':
+        specifier: ^5.2.10
+        version: 5.2.10
       '@fontsource-variable/epilogue':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/montserrat-alternates':
         specifier: ^5.2.8
         version: 5.2.8
       '@tailwindcss/vite':
@@ -270,8 +276,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource-variable/commissioner@5.2.10':
+    resolution: {integrity: sha512-I2OzXSgj2rQdhdysZEvcH2zmyO/dmMviSR6tWCMTwFXimtKJctadlmfoF1Pm9w/kSAe3fo9MhTZwppJE0/Xnmw==}
+
   '@fontsource-variable/epilogue@5.2.8':
     resolution: {integrity: sha512-YfO0l0GxR1cs9YsSmc+jMhD9uClAXXslPRiO0y1snJOpX5Y4Mn6uTRXgHsugo51mI+cLzFOyxp0g3O0CsnBHtA==}
+
+  '@fontsource/montserrat-alternates@5.2.8':
+    resolution: {integrity: sha512-DmyZGumT4Q+KGyZ2tXWQwhFFwYWK4F1RH20r+7j2SiBEEGOylrRYokoDAkp3qzS6iyPfXCktEdPFXqG7LBdtIg==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -2016,7 +2028,11 @@ snapshots:
   '@esbuild/win32-x64@0.25.12':
     optional: true
 
+  '@fontsource-variable/commissioner@5.2.10': {}
+
   '@fontsource-variable/epilogue@5.2.8': {}
+
+  '@fontsource/montserrat-alternates@5.2.8': {}
 
   '@img/colour@1.0.0':
     optional: true
