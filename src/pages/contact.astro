@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="this is me" description="Identity in flux.">
+  <div
+    class="min-h-screen bg-background text-foreground transition-colors duration-300"
+  >
+    <main class="flex items-center justify-center min-h-screen px-4">
+      <div class="w-full max-w-2xl">
+        <div class="mb-16">
+          <div class="mb-12 flex justify-start">
+            <div
+              class="relative w-24 h-24 rounded-full overflow-hidden bg-muted flex-shrink-0"
+            >
+              <img
+                alt="thisisme's profile picture"
+                width="96"
+                height="96"
+                decoding="async"
+                data-nimg="1"
+                class="w-full h-full object-cover"
+                src="/avatar.png"
+                style="color: transparent;"
+              />
+            </div>
+          </div><div class="space-y-6">
+            <div>
+              <h1
+                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
+              >
+                how to contact me
+              </h1>
+            </div>
+            <div class="space-y-4">
+              <p class="text-base text-foreground/60 leading-relaxed max-w-xl">
+                Normally here would appear a contact form, but I don't have one ready yet (this yet has 
+                been here for over 10 years, d'oh). Instead please reach out using the social 
+                networks/sites on the home page. You might also be able to guess an email address. 
+                I suggest trying hello@ the domain you are currently viewing this on.
+              </p>
+              <h2 class="text-lg font-heading text-foreground/80 leading-relaxed max-w-xl">
+                <strong class="font-black">Note to recruiters</strong> 👋<br />
+                It's nice to meet you, but you are not an emergency. I'm happy in my current role,  
+                and an unexpected phone call is very likely to make a very negative impression of both 
+                you and your clients. Stick to email!
+              </h2>
+              <p
+                class="text-base text-foreground/60 leading-relaxed max-w-xl"
+              >
+                Australia <br />
+                +61 427 777 932 <br />
+                USA <br />
+                +1 415 341 5141
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-1">
+          {
+            socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block py-4 px-0 transition-all duration-200 cursor-pointer"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-3 mb-1.5">
+                      <span class="text-lg flex-shrink-0">{link.icon}</span>
+                      <h3 class="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-200">
+                        {link.name}
+                      </h3>
+                    </div>
+                    <p class="text-sm text-foreground/60 group-hover:text-foreground/80 transition-colors duration-200">
+                      {link.description}
+                    </p>
+                  </div>
+                  {/* <ChevronRight class="w-5 h-5 text-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200 flex-shrink-0 mt-1" /> */}
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
