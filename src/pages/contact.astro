@@ -40,11 +40,13 @@ import Layout from "../layouts/Layout.astro";
                 I suggest trying hello@ the domain you are currently viewing this on.
               </p>
               <h2 class="text-lg font-heading text-foreground/80 leading-relaxed max-w-xl">
-                <strong class="font-black">Note to recruiters</strong> 👋<br />
+                Note to recruiters 👋
+              </h2>
+              <p class="text-base text-foreground/60 leading-relaxed max-w-xl">
                 It's nice to meet you, but you are not an emergency. I'm happy in my current role,  
                 and an unexpected phone call is very likely to make a very negative impression of both 
                 you and your clients. Stick to email!
-              </h2>
+              </p>
               <p
                 class="text-base text-foreground/60 leading-relaxed max-w-xl"
               >
@@ -55,34 +57,6 @@ import Layout from "../layouts/Layout.astro";
               </p>
             </div>
           </div>
-        </div>
-        <div class="space-y-1">
-          {
-            socialLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group block py-4 px-0 transition-all duration-200 cursor-pointer"
-              >
-                <div class="flex items-start justify-between gap-4">
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-3 mb-1.5">
-                      <span class="text-lg flex-shrink-0">{link.icon}</span>
-                      <h3 class="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-200">
-                        {link.name}
-                      </h3>
-                    </div>
-                    <p class="text-sm text-foreground/60 group-hover:text-foreground/80 transition-colors duration-200">
-                      {link.description}
-                    </p>
-                  </div>
-                  {/* <ChevronRight class="w-5 h-5 text-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200 flex-shrink-0 mt-1" /> */}
-                </div>
-              </a>
-            ))
-          }
         </div>
       </div>
     </main>
