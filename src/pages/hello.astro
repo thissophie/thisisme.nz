@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="hello, I'm Sophie Quinn-Graham"
+  description="An update about who I am."
+>
+  <div
+    class="min-h-screen bg-background text-foreground transition-colors duration-300"
+  >
+    <main class="flex items-center justify-center min-h-screen px-4">
+      <div class="w-full max-w-2xl">
+        <div class="mb-16">
+          <div class="mb-12 flex justify-start">
+            <div
+              class="relative w-24 h-24 rounded-full overflow-hidden bg-muted flex-shrink-0"
+            >
+              <img
+                alt="thisisme's profile picture"
+                width="96"
+                height="96"
+                decoding="async"
+                data-nimg="1"
+                class="w-full h-full object-cover"
+                src="/avatar.png"
+                style="color: transparent;"
+              />
+            </div>
+          </div><div class="space-y-6">
+            <div>
+              <h1
+                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
+              >
+                hello, I'm <span class="whitespace-nowrap"
+                  >Sophie Quinn-Graham</span
+                >
+              </h1>
+            </div>
+            <div class="space-y-4">
+              <h2
+                class="text-lg font-heading text-foreground/80 contrast-more:text-foreground leading-relaxed max-w-xl"
+              >
+                my pronouns are she/her
+              </h2>
+              <p
+                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
+              >
+                You likely know me by another name
+                <span
+                  class="text-foreground/40 contrast-more:text-foreground/80 hover:text-foreground/80"
+                  title="Patrick">Patrick</span
+                >.
+              </p>
+              <p
+                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
+              >
+                This name doesn't reflect me as I know myself, so I'd like to
+                reintroduce myself to you with the name <strong>Sophie</strong> that
+                better reflects the person I've come to recongise.
+              </p>
+              <p
+                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
+              >
+                The real world is eventually consistent, so it's going to take
+                me some time to filter this update across all the social and
+                professional groups I exist in. I'm not going to get upset if
+                you don't know this, but I'd appreciate you making the effort
+                and updating any references to me that you might have.
+              </p>
+              <p
+                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
+              >
+                You might want to go <a href="/" class="underline hover:text-foreground">Home</a> or 
+                to <a href="https://cloudisland.nz/@thisisme" class="underline hover:text-foreground">Mastodon</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
