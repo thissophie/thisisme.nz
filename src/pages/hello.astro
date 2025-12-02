@@ -1,4 +1,5 @@
 ---
+import Avatar from "../components/Avatar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -13,21 +14,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="w-full max-w-2xl">
         <div class="mb-16">
           <div class="mb-12 flex justify-start">
-            <div
-              class="relative w-24 h-24 rounded-full overflow-hidden bg-muted flex-shrink-0"
-            >
-              <img
-                alt="thisisme's profile picture"
-                width="96"
-                height="96"
-                decoding="async"
-                data-nimg="1"
-                class="w-full h-full object-cover"
-                src="/avatar.png"
-                style="color: transparent;"
-              />
-            </div>
-          </div><div class="space-y-6">
+            <Avatar />
+          </div>
+          <div class="space-y-6">
             <div>
               <h1
                 class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
@@ -39,7 +28,10 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-lg font-heading text-foreground/80 contrast-more:text-foreground leading-relaxed max-w-xl"
               >
-                my pronouns are <strong class="text-foreground contrast-more:underline">she/her</strong>
+                my pronouns are <strong
+                  class="text-foreground contrast-more:underline"
+                  >she/her</strong
+                >
               </h2>
               <p
                 class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
@@ -71,10 +63,12 @@ import Layout from "../layouts/Layout.astro";
               >
                 You might want to go <a
                   href="/"
-                  class="underline hover:text-foreground contrast-more:font-bold">Home</a
+                  class="underline hover:text-foreground contrast-more:font-bold"
+                  >Home</a
                 > or to <a
                   href="https://cloudisland.nz/@thisisme"
-                  class="underline hover:text-foreground contrast-more:font-bold">Mastodon</a
+                  class="underline hover:text-foreground contrast-more:font-bold"
+                  >Mastodon</a
                 >.
               </p>
             </div>
