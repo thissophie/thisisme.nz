@@ -1,80 +1,36 @@
 ---
 import Avatar from "../components/Avatar.astro";
+import PageTitle from "../components/PageTitle.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
 import Layout from "../layouts/Layout.astro";
+import PageMain from "../components/PageMain.astro";
+import Link from "../components/Link.astro";
 ---
 
-<Layout
-  title="hello, I'm Sophie Quinn-Graham"
-  description="my pronouns are she/her"
->
-  <div
-    class="min-h-screen bg-background text-foreground transition-colors duration-300"
-  >
-    <main class="flex items-center justify-center min-h-screen px-4">
-      <div class="w-full max-w-2xl">
-        <div class="mb-16">
-          <div class="mb-12 flex justify-start">
-            <Avatar />
-          </div>
-          <div class="space-y-6">
-            <div>
-              <h1
-                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
-              >
-                hello, I'm Sophie
-              </h1>
-            </div>
-            <div class="space-y-4">
-              <h2
-                class="text-lg font-heading text-foreground/80 contrast-more:text-foreground leading-relaxed max-w-xl"
-              >
-                my pronouns are <strong
-                  class="text-foreground contrast-more:underline"
-                  >she/her</strong
-                >
-              </h2>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                You may have spotted a few hints (I'm not great at being subtle
-                when I'm trying to be), and I'm ready to share: I'm Sophie <span
-                  class="whitespace-nowrap">Quinn-Graham</span
-                >, a trans woman.
-              </p>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                If you're wondering if I'm the person with a name you think you
-                know, hi! I probably am. I'm also still married to a wonderful
-                person named Patrick, so I don't have negative feelings about
-                that name - but we're both going to miss being "the two pats".
-              </p>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                The real world is eventually consistent, so it's going to take
-                me some time to filter this update across all the social and
-                professional groups I exist in. I'm not going to get upset if
-                you don't know this, but I'd appreciate you making the effort
-                and updating any references to me that you might have.
-              </p>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                You might want to go <a
-                  href="/"
-                  class="underline hover:text-foreground contrast-more:font-bold"
-                  >Home</a
-                > or to <a
-                  href="https://cloudisland.nz/@thisisme"
-                  class="underline hover:text-foreground contrast-more:font-bold"
-                  >Mastodon</a
-                >.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
+<Layout title="hello, I'm Sophie Quinn-Graham" description="my pronouns are she/her">
+  <PageTitle>hello, I'm Sophie</PageTitle>
+  <PageSubTitle>
+    my pronouns are <strong class="text-foreground contrast-more:underline">she/her</strong>
+  </PageSubTitle>
+
+  <PageMain>
+    <p>
+      You may have spotted a few hints (I'm not great at being subtle when I'm trying to be), and I'm ready to share:
+      I'm Sophie <span class="whitespace-nowrap">Quinn-Graham</span>, a trans woman.
+    </p>
+    <p>
+      If you're wondering if I'm the person with a name you think you know, hi! I probably am. I'm also still married to
+      a wonderful person named Patrick, so I don't have negative feelings about that name - but we're both going to miss
+      being "the two pats".
+    </p>
+    <p>
+      The real world is eventually consistent, so it's going to take me some time to filter this update across all the
+      social and professional groups I exist in. I'm not going to get upset if you don't know this, but I'd appreciate
+      you making the effort and updating any references to me that you might have.
+    </p>
+    <p>
+      You might want to go <Link href="/">Home</Link> or to
+      <Link href="https://cloudisland.nz/@thisisme">Mastodon</Link>.
+    </p>
+  </PageMain>
 </Layout>

@@ -1,40 +1,25 @@
 ---
+import Link from "../components/Link.astro";
+import PageMain from "../components/PageMain.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
+import PageTitle from "../components/PageTitle.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
   title="hello, I'm Sophie Quinn-Graham"
   description="my pronouns are she/her"
+  hideAvatar={true}
+  hideCopyright={true}
 >
-  <div
-    class="min-h-screen bg-background text-foreground transition-colors duration-300"
-  >
-    <main class="flex items-center justify-center min-h-screen px-4">
-      <div class="w-full max-w-2xl">
-        <div class="mb-16">
-          <div class="space-y-6">
-            <div>
-              <h1
-                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
-              >
-                hello, I'm Sophie
-              </h1>
-            </div>
-            <div class="space-y-4">
-              <h2
-                class="text-lg font-heading text-foreground/80 contrast-more:text-foreground leading-relaxed max-w-xl"
-              >
-                my pronouns are <strong class="text-foreground contrast-more:underline">she/her</strong>
-              </h2>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                Thank you for noticing this. Your noticing has been noticed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
+  <PageTitle>
+    hello, please call me
+    <strong class="text-foreground contrast-more:underline">Sophie</strong>
+  </PageTitle>
+
+  <PageSubTitle>
+    my pronouns are <strong class="text-foreground contrast-more:underline">she/her</strong>
+  </PageSubTitle>
+
+  <PageMain> Thank you for noticing this notice. Your noticing has been noticed and appreciated.</PageMain>
 </Layout>

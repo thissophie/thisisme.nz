@@ -1,105 +1,46 @@
 ---
-import Avatar from "../components/Avatar.astro";
+import PageTitle from "../components/PageTitle.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
 import Layout from "../layouts/Layout.astro";
+import PageMain from "../components/PageMain.astro";
+import Link from "../components/Link.astro";
 ---
 
-<Layout title="this is me" description="Identity in flux.">
-  <div
-    class="min-h-screen bg-background text-foreground transition-colors duration-300"
-  >
-    <main class="flex items-center justify-center min-h-screen px-4">
-      <div class="w-full max-w-2xl space-y-5">
-        <div>
-          <div class="mb-12 flex justify-start">
-            <Avatar />
-          </div>
-          <div class="space-y-6">
-            <div>
-              <h1
-                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
-              >
-                this is Sophie
-              </h1>
-            </div>
-            <div class="space-y-4">
-              <!-- <p class="text-lg text-foreground/80 leading-relaxed max-w-xl">
-                You probably know me as Patrick
-              </p> -->
-              <h2
-                class="text-lg font-heading text-foreground/80 leading-relaxed max-w-xl"
-              >
-                Sophie Quinn-Graham
-              </h2>
+<Layout title="this is Sophie" description="Sophie Quinn-Graham, she/her">
+  <PageTitle>this is Sophie</PageTitle>
 
-              <article
-                class="text-base text-foreground/60 leading-relaxed max-w-xl space-y-5"
-              >
-                <p>
-                  I am just a <a
-                    href="/hello"
-                    class="underline hover:text-foreground contrast-more:font-bold"
-                    >girl</a
-                  > living in Sydney, Australia.
-                </p>
+  <PageSubTitle>Sophie Quinn-Graham</PageSubTitle>
 
-                <!-- <p>
-                  I have spent my time at work empowering people to design and
-                  build reliable, secure and scalable systems: a micro service,
-                  an internal platform, a team, achieving and retaining multiple
-                  compliance standards (incl PCI DSS 3.2.1, SOC 2 Type 2, and
-                  various AWS partnership programs).
-                </p> -->
+  <PageMain>
+    <p>
+      I am just a <Link href="/hello">girl</Link> living in Sydney, Australia.
+    </p>
 
-                <!-- <p>
-                  I like doing AV things at events, see
-                  <a
-                    href="https://twopats.live/"
-                    class="underline hover:text-foreground contrast-more:font-bold"
-                    >Two Pats</a
-                  >.
-                </p> -->
+    {
+      /*
+      <p>
+          I have spent my time at work empowering people to design and
+          build reliable, secure and scalable systems: a micro service,
+          an internal platform, a team, achieving and retaining multiple
+          compliance standards (incl PCI DSS 3.2.1, SOC 2 Type 2, and
+          various AWS partnership programs).
+        </p>
+      */
+    }
 
-                <!-- <p>
-                  Rarely I
-                  <a
-                    href="https://patrick.nz/talks"
-                    class="underline hover:text-foreground contrast-more:font-bold"
-                    >talk</a
-                  >
-                  at conferences or meetups.
-                </p> -->
+    <p>
+      Rarely I
+      <Link href="/talks">talk</Link>
+      at conferences or meetups.
+    </p>
 
-                <p>
-                  Can be found on
-                  <a
-                    href="https://cloudisland.nz/@thisisme"
-                    class="underline hover:text-accent contrast-more:font-bold"
-                    rel="me">mastodon</a
-                  >,
-                  <!-- <Link href="https://www.youtube.com/@PatrickQuinnGraham">youtube</Link>, -->
-                  <!-- <a
-                    href="https://very.photos/patrick"
-                    class="text-purple-200 opacity-95 underline hover:text-white"
-                    >pixelfed</a
-                  >, -->
-                  <a
-                    href="https://github.com/thepatrick"
-                    class="underline hover:text-foreground contrast-more:font-bold"
-                    >GitHub</a
-                  >,
-                  <a
-                    href="https://www.linkedin.com/in/thepatrick"
-                    class="underline hover:text-foreground contrast-more:font-bold"
-                    >LinkedIn</a
-                  >.
-                </p>
+    <p>
+      Can be found on
+      <Link href="https://cloudisland.nz/@thisisme" rel="me">mastodon</Link>,
+      <Link href="https://github.com/thissophie">GitHub</Link>,
+      <Link href="https://www.linkedin.com/in/thepatrick">LinkedIn</Link>.
+    </p>
 
-                <p>Reach out by emailing hello@ this domain.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
+    <p>Reach out by emailing hello@ this domain.</p>
+  </PageMain>
 </Layout>

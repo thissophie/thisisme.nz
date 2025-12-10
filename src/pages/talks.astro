@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import FormattedDateMonthOnly from "../components/FormattedDateMonthOnly.astro";
+import Link from "../components/Link.astro";
+import TalkEntry from "../components/TalkEntry.astro";
+import PageTitle from "../components/PageTitle.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
+import PageMain from "../components/PageMain.astro";
+
+const talks = (await getCollection("talk")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title={`Talks`} description="Occasionally I talk about things">
+  <PageTitle>talks</PageTitle>
+
+  <PageSubTitle>Occasionally <Link href="/">Sophie</Link> talks about things</PageSubTitle>
+
+  <PageMain>
+    <p>
+      When I talk about something at a conference or meetup the slides will appear below, and where possible a link to a
+      recording. If you want to discuss any of these, <a href="make-contact.html">reach out</a>.
+    </p>
+
+    {
+      talks.map((talk) => (
+        <section class="space-y-4 p-4 md:p-8 xl:p-12 bg-fuchsia-100 contrast-more:bg-fuchsia-50 rounded-lg text-fuchsia-900">
+          <h3 class="text-2xl md:text-3xl font-heading font-medium">{talk.data.title}</h3>
+          <p>
+            <Link href={talk.data.event.link}>
+              At {talk.data.event.name} (<FormattedDateMonthOnly date={talk.data.date} />)
+            </Link>
+          </p>
+
+          <TalkEntry talk={talk} />
+
+          <ul class="list-disc px-6">
+            {talk.data.links.map((link) => (
+              <li>
+                <Link href={link.href}>{link.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </PageMain>
+</Layout>

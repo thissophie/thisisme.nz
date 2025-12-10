@@ -1,64 +1,42 @@
 ---
 import Avatar from "../components/Avatar.astro";
+import Link from "../components/Link.astro";
+import PageMain from "../components/PageMain.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
+import PageTitle from "../components/PageTitle.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="this is me" description="Identity in flux.">
-  <div
-    class="min-h-screen bg-background text-foreground transition-colors duration-300"
-  >
-    <main class="flex items-center justify-center min-h-screen px-4">
-      <div class="w-full max-w-2xl">
-        <div class="mb-16">
-          <div class="mb-12 flex justify-start">
-            <Avatar />
-          </div>
-          <div class="space-y-6">
-            <div>
-              <h1
-                class="text-4xl md:text-5xl font-heading font-medium leading-tight tracking-tight text-accent"
-              >
-                how to contact Sophie
-              </h1>
-            </div>
+<Layout title="Contact Sophie" description="how to contact Sophie">
+  <PageTitle> how to contact Sophie </PageTitle>
 
-            <article
-              class="text-base text-foreground/60 leading-relaxed max-w-xl space-y-4"
-            >
-              <p>
-                Please reach out using the social networks/sites on the home
-                page. You might also be able to guess an email address. I
-                suggest trying hello@ the domain you are currently viewing this
-                on.
-              </p>
-              <h2 class="text-lg font-heading text-foreground/80">
-                Note to recruiters and sales folk 👋
-              </h2>
-              <p>
-                It's nice to meet you, but you are not an emergency. I'm happy
-                in my current role, and an unexpected phone call is very likely
-                to make a very negative impression of both you and your clients.
-                Stick to email!
-              </p>
+  <PageSubTitle>
+    my pronouns are <strong class="text-foreground contrast-more:underline">she/her</strong>
+  </PageSubTitle>
 
-              <h2 class="text-lg font-heading text-foreground/80">
-                Australia/Signal
-              </h2>
-              <p>+61 427 777 932</p>
-              <h2 class="text-lg font-heading text-foreground/80">USA</h2>
-              <p>+1 415 341 5141</p>
-              <p
-                class="text-base text-foreground/60 contrast-more:text-foreground/80 leading-relaxed max-w-xl"
-              >
-                You might want to go <a
-                  href="/"
-                  class="underline hover:text-foreground contrast-more:font-bold">Home</a
-                >.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
+  <PageMain>
+    <p>
+      Please reach out using the social networks/sites on the <Link href="/">home page</Link>. You might also be able to
+      guess an email address. I suggest trying hello@ the domain you are currently viewing this on.
+    </p>
+
+    <section
+      class="space-y-4 p-4 md:p-8 xl:p-12 bg-fuchsia-100 contrast-more:bg-fuchsia-50 rounded-lg text-fuchsia-900"
+    >
+      <h2 class="text-lg font-heading text-foreground/80">Note to recruiters and sales folk 👋</h2>
+      <p>
+        It's nice to meet you, but you are not an emergency. I'm happy in my current role, and an unexpected phone call
+        is very likely to make a very negative impression of both you and your clients. Stick to email!
+      </p>
+    </section>
+
+    <div>
+      <h2 class="text-lg font-heading text-foreground/80">Australia/Signal</h2>
+      <p>+61 427 777 932</p>
+    </div>
+    <div>
+      <h2 class="text-lg font-heading text-foreground/80">USA</h2>
+      <p>+1 415 341 5141</p>
+    </div>
+  </PageMain>
 </Layout>

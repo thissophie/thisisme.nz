@@ -1,13 +1,19 @@
 ---
-
 // import '@fontsource-variable/epilogue';
-import '@fontsource-variable/commissioner';
-import '@fontsource/montserrat-alternates';
+import "@fontsource-variable/commissioner";
+import "@fontsource/montserrat-alternates";
 
-import '../styles/global.css'
+import "../styles/global.css";
+import Avatar from "../components/Avatar.astro";
 
+export interface Props {
+  title: string;
+  description?: string;
+  hideAvatar?: boolean;
+  hideCopyright?: boolean;
+}
 
-const { title, description } = Astro.props;
+const { title, description, hideAvatar, hideCopyright } = Astro.props;
 ---
 
 <!doctype html>
@@ -34,6 +40,49 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-sans antialiased">
-    <slot />
+    <div class="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <main class="flex items-center justify-center min-h-screen px-4">
+        <div class="w-full max-w-2xl space-y-5">
+          <div class="py-5">
+            {
+              !hideAvatar && (
+                <div class="mb-12 flex justify-start">
+                  <a href="/">
+                    <Avatar />
+                  </a>
+                </div>
+              )
+            }
+
+            <div class="space-y-4">
+              <slot />
+            </div>
+
+            {
+              !hideCopyright && (
+                <div class="py-8 md:py-16">
+                  <p
+                    class:list={[
+                      "text-sm",
+                      "contrast-more:text-base",
+                      "text-foreground/30",
+                      "contrast-more:text-foreground/60",
+                      "hover:text-foreground/60",
+                      "leading-relaxed",
+                      "max-w-xl",
+                      "space-y-5",
+                    ]}
+                  >
+                    Copyright &copy; 1999-2025 Sophie Quinn-Graham.
+                    <br />
+                    <small>Built with ❤️, astro &amp; tailwindcss</small>
+                  </p>
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
