@@ -1,0 +1,24 @@
+---
+import Avatar from "../components/Avatar.astro";
+import PageTitle from "../components/PageTitle.astro";
+import PageSubTitle from "../components/PageSubTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import PageMain from "../components/PageMain.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="hello, I'm Sophie Quinn-Graham" description="my pronouns are she/her">
+  <PageTitle>hello, I'm Sophie</PageTitle>
+  <PageSubTitle> Sorry, I couldn't find that </PageSubTitle>
+
+  <PageMain>
+    <p>
+      There's been <Link href="/hello">some changes</Link> around here, and right now I have prioritised migrating the website
+      over not breaking old links.
+    </p>
+    <p>
+      You might want to go <Link href="/">Home</Link> or to
+      <Link href="https://cloudisland.nz/@thisisme">Mastodon</Link>.
+    </p>
+  </PageMain>
+</Layout>
